@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.logo{
+    text-align: center;
+    background-color: white;
+}
+.infor{
+    background-color: white;
+    padding: 5px 7% 1.5% 7%;
+}
+.infor_firstchild{
+    font-size: 42px;
+    padding-bottom:20px;
+}
+.infor_secondchild{
+    display: block;
+    display: flex;
+    justify-content: space-between;
+}
+.infor_group p:first-child{
+    font-size: 22px;
+    font-weight: 400;
+    color: red;
+}
+.introduce{
+    display: block;
+    display: flex;
+}
+.introduce_img img{
+    margin-left: 0;
+    width: 70%;
+    height: auto;
+}
+.introduce_text{
+    padding-left: 50px;
+}
+div.image{
+    background-image: url("../img/taycan/taycan01.jfif");
+    background-repeat: repeat;
+    width: 60rem;
+    height: 35rem;
+    background-size: cover;
+}
+.introduce_text_first-child{
+    font-size: 36px;
+
+}
+.introduce_text_group{
+    display: block;
+    display: flex;
+    padding-top: 80px;
+}
+

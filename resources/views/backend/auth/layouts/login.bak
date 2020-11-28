@@ -1,0 +1,104 @@
+@extends('backend.auth.layouts.master')
+@section('login')
+    <div class="container-fluid h-100">
+        <div class="row flex-row h-100 bg-white">
+            <div class="col-xl-8 col-lg-6 col-md-5 p-0 d-md-block d-lg-block d-sm-none d-none">
+            <div class="lavalite-bg" style="background-image: url(' {{asset('backend/img/auth/login-bg.jpg')}}')">
+                    <div class="lavalite-overlay"></div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-7 my-auto p-0">
+                @if ( Session::has('success') )
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <strong>{{ Session::get('success') }}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                @endif
+                {{--    erro--}}
+                    {{-- @if ( Session('error') )
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <strong>{{ Session::get('error') }}</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    @endif --}}
+                {{-- @if (session('status'))
+                    <div class=" col-xl-12  alert bg-success alert-success text-white" role="alert">
+                        {{ session('status') }}
+                    </div>
+                @endif --}}
+                <div class="authentication-form mx-auto">
+                    <div class="logo-centered">
+                        <a href="../index.html"><img src="  {{ asset('backend/img/auth/logo3.png') }} " alt=""></a>
+                    </div>
+                    <h3>Đăng nhập vào Enny</h3>
+                    <p>Rất vui được gặp lại bạn!</p>
+                    <form method="POST" action="{{ route('admin.login') }}">
+                        @csrf
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control {{ ( $errors->first('email') ? 'form-control-warning' : '')}} " placeholder="Email" required="" value="">
+                            <i class="ik ik-user"></i>
+                            @if ($errors->has('email'))
+                                <code>{{ $errors->first('email') }}</code>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control {{ ( $errors->first('password') ? 'form-control-warning' : '')}}" placeholder="Password" required="" value="">
+                            <i class="ik ik-lock"></i>
+                            @if ($errors->has('password'))
+                                <code>{{ $errors->first('password') }}</code>
+                            @endif
+                        </div>
+                        <div class="row">
+                            <div class="col text-left">
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="item_checkbox" name="item_checkbox" value="option1">
+                                    <span class="custom-control-label">&nbsp;ghi nhớ cho lần đăng nhập sau</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sign-btn text-center">
+                            <button class="btn btn-theme">đăng nhập</button>
+                        </div>
+                    </form>
+                    <div class="register">
+                        <p>bạn chưa có tài khoản ? <a href=" {{ route('admin.register') }} ">tạo tài khoản mới </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+@section('JS_REGION')
+<script>
+        @if(session('error'))
+            $.toast({
+            heading: 'có lỗi xảy ra',
+            text: '{{ session('error') }}',
+            showHideTransition: 'slide',
+            icon: 'success',
+            loaderBg: '#2dce89',
+            bgColor : '#f5365c',
+            textColor : '#eee', 
+            position: 'top-right'
+            })
+        @endif
+        @if(session('status'))
+            $.toast({
+            heading: 'success',
+            text: '{{ session('status') }}',
+            showHideTransition: 'slide',
+            icon: 'success',
+            loaderBg: '#2dce89',
+            bgColor : '#2dce89',
+            textColor : '#eee', 
+            position: 'top-right'
+            })
+        @endif
+</script>
+@endsection

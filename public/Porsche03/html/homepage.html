@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/homepage.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Porsche.ca</title>
+</head>
+<body>
+    <div class="navigation">
+        <div class="navigation_left">
+            <a href="#">Porsche.ca</a>
+            <a href="login.html">My Porsche</a>
+        </div>
+        <div class="navigation_right">
+        <a href="login.html">Login & Registration</a>
+        </div>
+    </div>
+    <div class="logo">
+        <img src="https://files.porsche.com/filestore/image/multimedia/none/875d5e3d-6763-47fe-bc52-809142d53274/svg/9bee0427-35f0-11ea-80c6-005056bbdc38/porsche-svg.svg" width="130px" height="80px">
+        <hr>
+    </div>
+    <div class="menu primary-navication">
+        <ul>
+            <li>
+                <a href="#" class="active">Models</a>
+                <!-- <ul>
+                    <li>718</li>
+                    <li>911</li>
+                    <li>Taycan</li>
+                    <li>Panamera</li>
+                    <li>Tiger</li>
+                    <li>Cayenne</li>
+                </ul> -->
+            </li>
+            <li>
+                <a href="#" class="active">Porsche Finder</a>
+                <!-- <ul>
+                    <li>New Cars</li>
+                    <li>Pre-owned Cars</li>
+                    <li>Porsche Approved</li>
+                </ul> -->
+            </li>
+            <li>
+                <a href="#" class="active">Discover Online</a>
+            </li>
+            <li>
+                <a href="#" class="active">Event & Racing</a>
+                <!-- <ul>
+                    <li>Motorsport</li>
+                    <li>Porsche Experience</li>
+                    <li>Porsche Clubs</li>
+                    <li>Porsche Goft</li>
+                    <li>Porsche Partner Forum</li>
+                    <li>European Delivery</li>
+                    <li>SportCars Together</li>
+                </ul> -->
+            </li>
+            <li>
+                <a href="#"  class="active">Service & Accessories</a>
+                <!-- <ul>
+                    <li>Motorsport</li>
+                    <li>Porsche Experience</li>
+                    <li>Porsche Clubs</li>
+                    <li>Porsche Goft</li>
+                    <li>Porsche Partner Forum</li>
+                    <li>European Delivery</li>
+                    <li>SportCars Together</li>
+                </ul> -->
+            </li>
+            <li>
+                <a href="#"  class="active">About Porsche</a>
+                <!-- <ul>
+                    <li>Motorsport</li>
+                    <li>Porsche Experience</li>
+                    <li>Porsche Clubs</li>
+                    <li>Porsche Goft</li>
+                    <li>Porsche Partner Forum</li>
+                    <li>European Delivery</li>
+                    <li>SportCars Together</li>
+                </ul> -->
+            </li>
+        </ul>
+    </div>
+    <!-- <div class="background">
+        <img src="../img/homepage/background.png" >
+    </div> -->
+    <div class="slide">
+      <img src="../img/homepage/homepage01.png" class="slide-item" number="0" />
+      <img src="../img/homepage/homepage02.png" class="slide-item" number="1" style="display: none;"  />
+      <img src="../img/homepage/background.png" class="slide-item" number="2" style="display: none;"  />
+      <a href="#" class="next">></a>
+      <a href="#" class="prev"><</a>
+   </div>
+   <script src="../jquery-3.5.0.js"></script>
+   <script>
+     $(()=>{
+
+      $('.next').click(function(){
+        changeImage('next');
+      })
+
+      $('.prev').click(function(){
+        changeImage('prev');
+      })
+
+     })
+
+     function changeImage(type){
+      let imgSelectVisible = $('img.slide-item:visible');
+      let imgVisible = parseInt(imgSelectVisible.attr('number'));
+      let eqNumber = type === 'next' ? imgVisible + 1 : imgVisible - 1;
+
+      if (eqNumber >= $('.slide-item').length){
+          eqNumber = 0
+      }
+  
+      $('img.slide-item').eq(eqNumber).fadeIn()
+
+      imgSelectVisible.fadeOut();
+      }
+      setInterval(changeImage,2500)
+      
+   </script>
+
+
+
+
+
+</div>
+    <diV class="wapper">
+        <!-- <p>Models</p> -->
+        <div class="wrapper-img-1">
+            <div class="box">
+                <!-- <p>Models</p> -->
+                <img src="../img/homepage/model1.png" class="models">
+                <p> > 718-MSRP $ 66,400</p>
+            </div>
+            <div class="box">
+                <!-- <p>Models</p> -->
+                <img src="../img/homepage/Model2.png" class="models">
+                <p>>  911 MSRP $ 113,000</p>
+            </div>
+            <div class="box">
+                <!-- <p>Taycan MSRP $ 119,400</p> -->
+                <img src="../img/homepage/model3.png" class="models">
+                <p> > Taycan MSRP $ 119,400</p>
+            </div>
+            <div class="box">
+        </div>
+    </diV>
+    <diV class="wapper">
+        <!-- <p>Models</p> -->
+        <div class="wrapper-img-1">
+            <div class="box">
+                <!-- <p>Models</p> -->
+                <img src="../img/homepage/model4.png" class="models">
+                <p> > 718-MSRP $ 66,400</p>
+            </div>
+            <div class="box">
+                <!-- <p>Models</p> -->
+                <img src="../img/homepage/model5.png" class="models">
+                <p> > 911 MSRP $ 113,000</p>
+            </div>
+            <div class="box">
+                <!-- <p>Taycan MSRP $ 119,400</p> -->
+                <img src="../img/homepage/model6.png" class="models">
+                <p> > Taycan MSRP $ 119,400</p>
+            </div>
+            <div class="box">
+        </div>
+    </diV>
+    <div class="find">
+        <p>Find a Porsche near you</p>
+        <div class="relative">
+            <img src="../img/homepage/find1.png" class="img">
+            <!-- <a href="#">Reserve a 781 Model</a> -->
+            <img src="../img/homepage/find2.png" class="img">
+            <!-- <a href="#">Reserve a 911 Model</a> -->
+            <img src="../img/homepage/find3.png" class="img">
+            <!-- <a href="#">Reserve a Taycan Model</a> -->
+        </div>
+    </div>
+    <div class="discover" >
+        <p>Discover</p>
+        <div class="grid-container">
+            <div class="row">
+                <div class="grid-item">
+                    <img src="https://files.porsche.com/filestore/image/multimedia/none/rd-2020-homepage-teaser-pcl-porscheconnect-kw41/normal/0de81ee8-0305-11eb-80ce-005056bbdc38;sL;twebp/porsche-normal.webp">
+                </div>
+                <div class="grid-item">
+                    <img src="https://files.porsche.com/filestore/image/multimedia/none/rd-2018-homepage-teaser-ww-e-performance-kw12/normal/f7cc8e7c-6599-11e9-80c4-005056bbdc38;sL;twebp/porsche-normal.webp">
+                </div>
+                <div class="grid-item">
+                    <img src="https://files.porsche.com/filestore/image/multimedia/none/rd-2020-homepage-teaser-pcl-myporsche-kw39/normal/3dc71943-f82d-11ea-80ce-005056bbdc38;sL;twebp/porsche-normal.webp">
+                </div>
+                <div class="grid-item">
+                    <img src="https://files.porsche.com/filestore/image/multimedia/none/rd-2020-homepage-teaser-pcl-porscheonlinecatalogue-kw41/normal/5e1186a2-0303-11eb-80ce-005056bbdc38;sL;twebp/porsche-normal.webp">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="video">
+        <div class="autoplay">
+            <iframe title="YouTube video player" width="1380" height="770" background="white" src="../img/homepage/y2mate.com - The new Panamera Turbo and Panamera 4S in motion._1080p.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div> -->
+    <!-- <div class="box_view">
+        <a href="#"> View more Panamera...</a>
+    </div> -->
+    <div class="footer">
+        <div>
+            <ul>
+                <li>Build & Find</li>
+                <li>Build your Porsche</li>
+                <li>Find a Porsche Centre</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Online Services</li>
+                <li>Sign up for News</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Behind the Scenes</li>
+                <li>Motorsport And Events</li>
+                <li>Porsche Classic</li>
+                <li>Porsche Museum</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Porsche Company</li>
+                <li>At a Glance</li>
+                <li>Jobs and Career</li>
+                <li>Contact and Information</li>
+                <li>Christophorus - The Porsche Magazine</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
